@@ -142,3 +142,38 @@ b = "10 20 30 40 50".split(" ")
 print(b)
 
 # f-문자열
+# f'문자열{표현식}문자열'
+print(f"3 + 4 = {3+4}")
+
+# f-문자열보다 format()함수를 사용하는 경우
+# - 문자열 내용이 너무 많을 때
+# - 데이터를 리스트에 담아서 사용할 때
+
+# 마무리
+# 3번 문제
+a = input("> 1번쨰 숫자: ")
+b = input("> 2번째 숫자: ")
+
+print()
+print("{} + {} = {}".format(a, b, int(a)+int(b)))
+
+# 4번 문제
+string = "hello"
+string.upper()
+print("A 지점:", string)
+print("B 지점", string.upper())
+
+# 구의 부피와 겉넓이를 구하는 프로그램
+pi = 3.141592
+r = input("구의 반지름을 입력해주세요: >")
+v = 4/3*pi*int(r)*int(r)*int(r)
+s = 4*pi*int(r)*int(r)
+print("구의 부피는 {:.13f} 입니다.".format(v))
+print("구의 겉넓이는 {:.4f} 입니다.".format(s))
+
+# 피타고라스의 정리
+b = input("밑변의 길이를 입력해주세요: >") 
+h = input("높이의 길이를 입력해주세요: >")
+print((float(b) * float(b)))
+print((float(h) * float(h)))
+print("빗변의 길이는 {:.1f} 입니다.".format(((float(b) * float(b)) + (float(h) * float(h))) ** (1/2)))
