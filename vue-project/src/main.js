@@ -1,5 +1,11 @@
-import { createApp } from 'vue'
+import {
+    createApp
+} from 'vue'
 import App from './App.vue'
-import router from './router'
+import router from './router' //라우터 추가
+import mixins from './mixins' //믹스인 추가
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+app.use(router)
+app.mixin(mixins)
+app.mount('#app')

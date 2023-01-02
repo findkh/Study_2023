@@ -22,6 +22,21 @@ import EventChange from '../views/EventChange.vue'
 import Computed_ex from '../views/Computed_ex.vue'
 import Watch_ex from '../views/Watch_ex.vue'
 import Watch2_ex from '../views/Watch2_ex.vue'
+import DataBindingList2 from '../views/DataBindingList2.vue'
+import NestedComponent from '../views/NestedComponent.vue'
+import ChildComponent from '../views/ChildComponent.vue'
+import ParentComponent from '../views/ParentComponent.vue'
+import ChildComponent2 from '../views/ChildComponent2.vue'
+import ParentComponent2 from '../views/ParentComponent2.vue'
+import ChildComponent3 from '../views/ChildComponent3.vue'
+import ParentComponent3 from '../views/ParentComponent3.vue'
+import ChildComponent4 from '../views/ChildComponent4.vue'
+import ParentComponent4 from '../views/ParentComponent4.vue'
+import ChildComponent5 from '../views/ChildComponent5.vue'
+import ParentComponent5 from '../views/ParentComponent5.vue'
+import SlotUseModalLayout from '../views/SlotUseModalLayout.vue'
+import ProvideInject from '../views/ProvideInject.vue'
+import ProvideInjectChild from '../views/ProvideInjectChild.vue'
 
 const routes = [
   {
@@ -146,7 +161,82 @@ const routes = [
     path: '/Watch2_ex',
     name: 'Watch2_ex',
     component: Watch2_ex
-  }
+  },
+  {
+    path: '/DataBindingList2',
+    name: 'DataBindingList2',
+    component: DataBindingList2
+  },
+  {
+    path: '/NestedComponent',
+    name: 'NestedComponent',
+    component: NestedComponent
+  },
+  {
+    path: '/ChildComponent',
+    name: 'ChildComponent',
+    component: ChildComponent
+  },  
+  {
+    path: '/ParentComponent',
+    name: 'ParentComponent',
+    component: ParentComponent
+  },
+  {
+    path: '/ChildComponent2',
+    name: 'ChildComponent2',
+    component: ChildComponent2
+  },  
+  {
+    path: '/ParentComponent2',
+    name: 'ParentComponent2',
+    component: ParentComponent2
+  },
+  {
+    path: '/ChildComponent3',
+    name: 'ChildComponent3',
+    component: ChildComponent3
+  },  
+  {
+    path: '/ParentComponent3',
+    name: 'ParentComponent3',
+    component: ParentComponent3
+  },
+  {
+    path: '/ChildComponent4',
+    name: 'ChildComponent4',
+    component: ChildComponent4
+  },  
+  {
+    path: '/ParentComponent4',
+    name: 'ParentComponent4',
+    component: ParentComponent4
+  },
+  {
+    path: '/ChildComponent5',
+    name: 'ChildComponent5',
+    component: ChildComponent5
+  },  
+  {
+    path: '/ParentComponent5',
+    name: 'ParentComponent5',
+    component: ParentComponent5
+  },
+  {
+    path: '/SlotUseModalLayout',
+    name: 'SlotUseModalLayout',
+    component: SlotUseModalLayout
+  },
+  {
+    path: '/ProvideInject',
+    name: 'ProvideInject',
+    component: ProvideInject
+  },
+  {
+    path: '/ProvideInjectChild',
+    name: 'ProvideInjectChild',
+    component: ProvideInjectChild
+  },
 ]
 
 const router = createRouter({
