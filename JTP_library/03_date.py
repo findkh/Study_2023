@@ -28,3 +28,13 @@ print(day.weekday())
 
 # isoweekday : 1이 월요일
 print(day.isoweekday())
+
+# 오늘부터 사귀기로 한 커플의 100일은?
+today = datetime.date.today()
+print(today)
+
+diff_days = datetime.timedelta(days=100)
+print(diff_days)
+
+day_100 = today + diff_days
+print(day_100)
