@@ -1,4 +1,4 @@
-package com.kh.blockmanager.controller;
+package com.kh.blockmanager.test_controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

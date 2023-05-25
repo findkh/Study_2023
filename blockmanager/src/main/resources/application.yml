@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    default: local
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-location: classpath:/static/**
+    add-mapping: true
+
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:postgresql://localhost:5432/block_manager 
+    username: block_manager
+    password: admin
