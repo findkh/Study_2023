@@ -1,8 +1,6 @@
 server:
   port: 8080
 spring:
-  profiles:
-    default: local
   mvc:
     static-path-pattern: /static/**
   resources:
@@ -14,3 +12,6 @@ spring:
     url: jdbc:log4jdbc:postgresql://localhost:5432/block_manager 
     username: block_manager
     password: admin
+
+mybatis:
+    mapper-locations: classpath:/mapper/*.xml

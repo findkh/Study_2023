@@ -20,4 +20,12 @@ public class ServiceContoller {
 		return returnValue;
 	}
 	    
+    @RequestMapping("/getData")
+	public String getData() {
+
+		log.info("getData..");
+		String returnValue = "getData";
+
+		return returnValue;
+	}
 }

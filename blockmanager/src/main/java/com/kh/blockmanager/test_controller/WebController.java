@@ -12,11 +12,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class WebController {
 
-    @RequestMapping(value = { "/", "/index", "/index.html" })
-	public String indexMain(Model model) {
-		log.info("web controller class paramaters as model");
-        return "index";
-    }    	
+//    @RequestMapping(value = { "/", "/index", "/index.html" })
+//	public String indexMain(Model model) {
+//		log.info("web controller class paramaters as model");
+//        return "index";
+//    }    	
 
 	@RequestMapping(value = { "/application-chat", "/application-chat.html" })
 	public String applicationChat() {
