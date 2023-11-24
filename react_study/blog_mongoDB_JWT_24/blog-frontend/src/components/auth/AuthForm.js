@@ -49,9 +49,15 @@ const textMap = {
 	register: '회원가입',
 };
 
-const AuthForm = (type, form, onChange, onSubmit) => {
-	const text = textMap[type.type];
-	console.log();
+const ErrorMessage = styled.div`
+	color: red;
+	text-align: center;
+	font-size: 0.875rem;
+	margin-top: 1rem;
+`;
+
+const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
+	const text = textMap[type];
 	return (
 		<AuthFormBlock>
 			<h3>{text}</h3>
@@ -71,8 +77,7 @@ const AuthForm = (type, form, onChange, onSubmit) => {
 					onChange={onChange}
 					value={form.password}
 				/>
-
-				{type.type === 'register' && (
+				{type === 'register' && (
 					<StyledInput
 						autoComplete="new-password"
 						name="passwordConfirm"
@@ -82,6 +87,8 @@ const AuthForm = (type, form, onChange, onSubmit) => {
 						value={form.passwordConfirm}
 					/>
 				)}
+				{error && <ErrorMessage>{error}</ErrorMessage>}
+				{/* <ErrorMessage>에러 발생!</ErrorMessage> */}
 				<ButtonWithMarginTop
 					cyan
 					fullWidth
@@ -91,7 +98,7 @@ const AuthForm = (type, form, onChange, onSubmit) => {
 				</ButtonWithMarginTop>
 			</form>
 			<Footer>
-				{type.type === 'login' ? (
+				{type === 'login' ? (
 					<Link to="/register">회원가입</Link>
 				) : (
 					<Link to="/login">로그인</Link>
