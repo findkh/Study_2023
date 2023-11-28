@@ -88,7 +88,6 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
 					/>
 				)}
 				{error && <ErrorMessage>{error}</ErrorMessage>}
-				{/* <ErrorMessage>에러 발생!</ErrorMessage> */}
 				<ButtonWithMarginTop
 					cyan
 					fullWidth
