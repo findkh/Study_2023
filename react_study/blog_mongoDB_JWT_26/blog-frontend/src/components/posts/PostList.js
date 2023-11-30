@@ -40,7 +40,7 @@ const PostItemBlock = styled.div`
 `;
 
 const PostItem = ({ post }) => {
-	const { publishedDate, user, tags, title, body, _id } = post;
+	const { publishedDate, user, tags, title, body, _id } = post._doc;
 	return (
 		<PostItemBlock>
 			<h2>
@@ -60,7 +60,6 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
 	if (error) {
 		return <PostListBlock>에러가 발생했습니다.</PostListBlock>;
 	}
-
 	return (
 		<PostListBlock>
 			<WritePostButtonWrapper>
@@ -70,11 +69,15 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
 					</Button>
 				)}
 			</WritePostButtonWrapper>
-			{!loading && posts && (
+			{!loading && posts != null && (
 				<div>
-					{posts.map((post) => (
+					{/* {posts.map((post) => (
 						<PostItem post={post} key={post._id} />
-					))}
+					))} */}
+					{posts.data &&
+						posts.data.map((post) => (
+							<PostItem post={post} key={post._id} />
+						))}
 				</div>
 			)}
 		</PostListBlock>

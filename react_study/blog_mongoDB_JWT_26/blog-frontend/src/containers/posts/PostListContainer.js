@@ -5,9 +5,12 @@ import { listPosts } from '../../modules/posts';
 import { useParams, useSearchParams } from 'react-router-dom';
 
 const PostListContainer = () => {
-	const { username } = useParams();
+	const { includesUserName } = useParams();
+	const username =
+		includesUserName && includesUserName.includes('@')
+			? includesUserName.replace('@', '')
+			: includesUserName;
 	const [searchParams] = useSearchParams();
-	console.log(username, searchParams);
 	const dispatch = useDispatch();
 	const { posts, error, loading, user } = useSelector(
 		({ posts, loading, user }) => ({
@@ -17,11 +20,9 @@ const PostListContainer = () => {
 			user: user.user,
 		}),
 	);
-
 	useEffect(() => {
 		const tag = searchParams.get('tag');
 		const page = parseInt(searchParams.get('page'), 10) || 1;
-		console.log(tag, username, page); //null undefined 1
 		dispatch(listPosts({ tag, username, page }));
 	}, [dispatch, searchParams, username]);
 
