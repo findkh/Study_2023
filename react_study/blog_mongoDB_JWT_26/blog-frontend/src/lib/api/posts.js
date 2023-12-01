@@ -15,7 +15,7 @@ export const readPost = (id) => {
 };
 
 export const listPosts = ({ page, username, tag }) => {
-	console.log(page, username);
+	// console.log('리스트 호출전: ', page, username);
 	return client.get(`/api/posts`, {
 		params: { page, username, tag },
 	});

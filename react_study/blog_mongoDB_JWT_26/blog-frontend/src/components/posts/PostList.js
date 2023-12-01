@@ -40,7 +40,9 @@ const PostItemBlock = styled.div`
 `;
 
 const PostItem = ({ post }) => {
-	const { publishedDate, user, tags, title, body, _id } = post._doc;
+	console.log(post);
+	const { publishedDate, user, tags, title, _id } = post._doc;
+	const { body } = post;
 	return (
 		<PostItemBlock>
 			<h2>
@@ -51,7 +53,7 @@ const PostItem = ({ post }) => {
 				publishedDate={new Date(publishedDate)}
 			/>
 			<Tags tags={tags} />
-			<p>{body}</p>
+			<div>{body}</div>
 		</PostItemBlock>
 	);
 };
