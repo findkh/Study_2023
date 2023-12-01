@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function separateCharsAndNumbers(arr) {
+        const chars = [];
+        const numbers = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+
+            if (typeof element === 'string') {
+            if (!isNaN(element)) {
+                numbers.push(Number(element));
+            } else {
+                chars.push(element);
+            }
+            } else if (typeof element === 'number') {
+            numbers.push(element);
+            }
+        }
+
+        return {
+            chars,
+            numbers
+        };
+    }
+
+    const arr = ['가', '나2', '다', '1', '라', '2', '3통째입니다 제 피부에 자신감이 생겼어요. ㅜ 피부가 굉장히 얇아 악건조에 예민하고 매끈하지못했는데 많이 좋아졌어요. ^^.'];
+    const result = separateCharsAndNumbers(arr);
+    console.log(result);
+</script>
+</body>
+</html>
